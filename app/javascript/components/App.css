@@ -1,11 +1,16 @@
 .display {
+    width: fit-content;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    background-color: rgb(212, 141, 34);
-    padding: 50px;
-    margin: 30px 50px;
-    border-radius: 20px;
+    font-size: 20px;
+    background-color: rgb(34, 212, 78);
+    padding: 60px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
   }
   
 hr {
-    width: 60%;
+    width: 70%;
 }
