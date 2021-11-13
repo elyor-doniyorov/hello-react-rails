@@ -31,7 +31,7 @@ const Greeting = () => {
 
   return (
     <div className="display">
-      <h2>Display random salutes from Redux </h2>
+      <h2>Display random salutes </h2>
       <hr />
       <p>{salutes && hello()}</p>
     </div>
