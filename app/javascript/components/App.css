@@ -1,0 +1,11 @@
+.display {
+    text-align: center;
+    background-color: rgb(212, 141, 34);
+    padding: 50px;
+    margin: 30px 50px;
+    border-radius: 20px;
+  }
+  
+hr {
+    width: 60%;
+}
