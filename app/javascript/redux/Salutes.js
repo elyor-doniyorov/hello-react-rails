@@ -1,4 +1,4 @@
-const DISPLAY_SALUTES = "HELLOWORDS/DISPLAY_SALUTES";
+const DISPLAY_SALUTES = "DISPLAY_SALUTES";
 
 const loadSalutes = (json) => ({
   type: DISPLAY_SALUTES,
