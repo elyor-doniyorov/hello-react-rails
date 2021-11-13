@@ -1,13 +1,41 @@
-import React from "react"
-import PropTypes from "prop-types"
-class Greeting extends React.Component {
-  render () {
-    return (
-      <React.Fragment>
-        {this.props.greeting}
-      </React.Fragment>
-    );
-  }
-}
+import React, { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { displaySalutes } from "../redux/Salutes";
 
-export default Greeting
+const Greeting = () => {
+  const salutes = useSelector((state) => state.saluteReducer);
+  const [salute, setSalute] = useState({});
+
+  setTimeout(() => {
+    window.location.reload(1);
+  }, 10000);
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    if (!salutes.length) {
+      dispatch(displaySalutes());
+    }
+  }, []);
+
+  const [body, displayBody] = useState([]);
+
+  useEffect(() => {
+    displayBody(salutes);
+  }, [salutes]);
+
+  const hello = () => {
+    return (
+      salutes[0] && salutes[Math.floor(Math.random() * salutes.length)].body
+    );
+  };
+
+  return (
+    <div className="display">
+      <h2>Display random salutes from Redux </h2>
+      <hr />
+      <p>{salutes && hello()}</p>
+    </div>
+  );
+};
+
+export default Greeting;

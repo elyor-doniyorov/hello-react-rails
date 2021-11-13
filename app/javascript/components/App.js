@@ -1,12 +1,15 @@
-import React from "react"
-import PropTypes from "prop-types"
-class App extends React.Component {
-  render () {
-    return (
-      <React.Fragment>
-      </React.Fragment>
-    );
-  }
-}
+import React from "react";
+import { Provider } from "react-redux";
 
-export default App
+import store from "../redux/configureStore";
+import Greeting from "./Greeting";
+import "./App.css";
+const App = () => {
+  return (
+    <Provider store={store}>
+      <Greeting />
+    </Provider>
+  );
+};
+
+export default App;
