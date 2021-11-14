@@ -1,4 +1,4 @@
-const DISPLAY_SALUTES = "DISPLAY_SALUTES";
+const DISPLAY_SALUTES = 'DISPLAY_SALUTES';
 
 const loadSalutes = (json) => ({
   type: DISPLAY_SALUTES,
@@ -21,7 +21,7 @@ const saluteReducer = (state = [], action) => {
 };
 
 const displaySalutes = () => (dispatch) => {
-  fetch("api/salutes")
+  fetch('api/salutes')
     .then((response) => response.json())
     .then((json) => dispatch(loadSalutes(json)));
 };

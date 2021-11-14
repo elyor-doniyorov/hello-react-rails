@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { displaySalutes } from "../redux/Salutes";
+/* eslint-disable no-unused-vars */
+import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { displaySalutes } from '../redux/Salutes';
 
 const Greeting = () => {
   const salutes = useSelector((state) => state.saluteReducer);
@@ -23,11 +24,9 @@ const Greeting = () => {
     displayBody(salutes);
   }, [salutes]);
 
-  const hello = () => {
-    return (
-      salutes[0] && salutes[Math.floor(Math.random() * salutes.length)].body
-    );
-  };
+  const hello = () => (
+    salutes[0] && salutes[Math.floor(Math.random() * salutes.length)].body
+  );
 
   return (
     <div className="display">
@@ -39,3 +38,4 @@ const Greeting = () => {
 };
 
 export default Greeting;
+/* eslint-enable no-unused-vars */
