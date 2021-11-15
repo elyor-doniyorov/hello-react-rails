@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+salutes = Salute.create([
+  { id: 71, body: 'Salute' },
+  { id: 72, body: 'Assalam Alaykum' },
+  { id: 83, body: 'Hello' },
+  { id: 54, body: 'Bonjour' },
+  { id: 55, body: 'Ciao' },
+  { id: 36, body: 'Namaste' }
+])
